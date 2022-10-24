@@ -13,11 +13,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.window = UIWindow(windowScene: windowScene)
+        let menuController = UINavigationController(rootViewController: MenuViewController())
+        let contactController = UINavigationController(rootViewController: ContactViewController())
+        let profileController = UINavigationController(rootViewController: ProfileViewController())
+        let basketController = UINavigationController(rootViewController: BasketViewController())
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [ menuController, contactController, profileController, basketController ]
+        menuController.title = "Меню"
+        contactController.title = "Контакты"
+        profileController.title = "Профиль"
+        basketController.title = "Корзина"
+        
+        let images = [ "takeoutbag.and.cup.and.straw","mappin.and.ellipse","person.fill", "cart"]
+        guard let items = tabBarController.tabBar.items else {
+            return
+        }
+        for x in 0..<items.count {
+            items[x].image = UIImage(systemName: images[x])
+        }
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
     }
+
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
