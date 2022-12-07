@@ -17,7 +17,7 @@ class ScrollTableViewCell: UITableViewCell {
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.cornerRadius = 20
-        view.image = UIImage(named: "WhatsApp Image 2022-04-22 at 16.26.05")
+        view.image = UIImage(named: "1625702581_15-phonoteka-org-p-art-pitstsa-menyu-krasivo-18" )
         return view
         
     }()
@@ -30,7 +30,7 @@ class ScrollTableViewCell: UITableViewCell {
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.cornerRadius = 20
-        view.image = UIImage(named: "WhatsApp Image 2022-04-22 at 16.26.05")
+        view.image = UIImage(named: "1625537050_13-kartinkin-com-p-sushi-pitstsa-fon-krasivie-foni-13")
         return view
         
     }()
@@ -43,7 +43,7 @@ class ScrollTableViewCell: UITableViewCell {
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.cornerRadius = 20
-        view.image = UIImage(named: "WhatsApp Image 2022-04-22 at 16.26.05")
+        view.image = UIImage(named: "CrXD7fxWgAAjvoB.jpg-large")
         return view
         
     }()

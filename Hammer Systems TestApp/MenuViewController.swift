@@ -30,7 +30,7 @@ class MenuViewController: UIViewController {
         
     }
     private func setupView(){
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .opaqueSeparator
         self.view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
